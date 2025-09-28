@@ -1,14 +1,17 @@
-
 # Programar em Python :D
 
 ## Ferramentas Necessárias
+
 Antes de começar, você vai precisar de:
+
 - **Visual Studio Code**
 - **Python 3.13**
 - Extensões para apoio ao código (ex: Python extension da Microsoft, Pylance, Error Lens, Python Indent, Live Code)
 
 ### Variáveis — uma "caixa" que guarda algo
+
 Nome da variável recebe valor. Exemplo:
+
 ```python
 idade = 25
 nome = "João"
@@ -16,6 +19,7 @@ altura = 1.70
 ```
 
 #### Exemplos certos:
+
 ```python
 idade = 25
 nome = "Maria"
@@ -24,34 +28,40 @@ ligado = True
 ```
 
 #### Exemplos errados (NÃO FAÇA ISSO):
+
 ```python
 # 1idade = 10            <- não pode começar com número
 # nome-da-pessoa = "Ana" <- hífen não é aceito
 # if = 20                <- palavra reservada não pode ser usada
 ```
 
-###  Regras para Variáveis
+### Regras para Variáveis
+
 - Começa com `_` ou letra do alfabeto latino.
 - Python é **sensível a maiúsculas/minúsculas** (`idade` ≠ `Idade`).
 - Pode conter letras, números e `_`.
 - Seja descritivo ao criar variáveis.
 - Evite palavras reservadas: `if`, `while`, `for`, `class`, `pass`, `continue`, `break`, `def`, `return`, `sum`, `import`, `try`, `except`, entre outras.
 
-###  Tipos de Dados
+### Tipos de Dados
+
 - **Número inteiro** → `int`  
   Ex.: `24`, `1`, `420`
+
 ```python
 idade: int = 24
 ```
 
 - **Número quebrado** → `float`  
   Ex.: `1.403`, `4.2`, `0.4`
+
 ```python
 altura: float = 1.70
 ```
 
 - **Verdadeiro ou falso** → `bool`  
   Ex.: `True`, `False`
+
 ```python
 ligado: bool = True
 desligado: bool = False
@@ -59,11 +69,13 @@ desligado: bool = False
 
 - **Texto** → `str`  
   Ex.: `"Oi"`, `"tExTo LeGaL"`, `"Olá Mundo!"`
+
 ```python
 nome: str = "João"
 ```
 
-###  Mostrando textos na telinha
+### Mostrando textos na telinha
+
 ```python
 print("Olá")
 texto = "Tudo bem?"
@@ -71,14 +83,17 @@ print(texto)  # <- imprimir variáveis de qualquer tipo
 print("Idade:", idade, "anos")
 ```
 
-###  Tipagem Dinâmica e Type Hint
+### Tipagem Dinâmica e Type Hint
+
 Python atribui o tipo automaticamente, mas **type hints** ajudam na leitura.
 (Hint = "dica", em inglês)
+
 ```python
 idade: int = 25
 ```
 
-###  Recebendo Dados
+### Recebendo Dados
+
 ```python
 a = input()  # recebe dados do teclado
 b = input("Insira sua idade: ")  # texto explicativo
@@ -86,6 +101,7 @@ c: int = int(input("Espero um inteiro! "))  # converte entrada em inteiro, poder
 ```
 
 ### Recebendo vários valores de uma vez só:
+
 ```python
 d, e, f, g = map(int, input("Digite 4 números separados por espaço: ").split(" "))
 # Ex.: entrada "4 5 6 7"
@@ -109,9 +125,11 @@ print(abs(3.14))      # 3.14
 temperatura = -5
 print(f"Temperatura absoluta: {abs(temperatura)}°C") # Temperatura absoluta: 5°C
 ```
+
 ## `max()` e `min()` - Maior e Menor Valor
 
 Retornam o maior (max) e o menor (min) valor de uma sequência ou de um conjunto de argumentos.
+
 ```python
 print(max(10, 20, 5)) # 20
 print(min(10, 20, 5)) # 5
@@ -137,6 +155,7 @@ print(round(3.14159, 3)) # 3.142
 ```
 
 ### Regra de arredondamento para .5:
+
 ### Arredonda para o número par mais próximo
 
 ```python
@@ -147,6 +166,7 @@ print(round(3.5))        # 4
 ## 2. Funções para Strings
 
 ## `len()` - Tamanho
+
 Retorna o número de itens de um objeto (o comprimento).
 
 ```python
@@ -166,6 +186,7 @@ print(texto.lower()) # python é incrível
 ```
 
 ## 3. Funções de Conversão de Tipo
+
 int(), float(), str()
 
 Funções que convertem valores para os tipos inteiro (int), ponto flutuante (float) ou string (str).
@@ -175,7 +196,7 @@ Funções que convertem valores para os tipos inteiro (int), ponto flutuante (fl
 print(int("10"))  # 10
 print(int(3.14))  # 3 (descarta decimais)
 
-# float 
+# float
 print(float("3.14")) # 3.14
 print(float(10))  # 10.0
 
@@ -204,6 +225,7 @@ print(bool("Texto"))  # True (não vazio)
 ### Print e Manipulação de Strings
 
 #### Usando f-strings
+
 ```python
 nome = "João"
 idade = 20
@@ -230,8 +252,8 @@ print("Nome: %s, Salário: R$ %.2f" % (nome, salario))
 # Saída: Nome: Carlos, Salário: R$ 2500.50
 ```
 
-
 #### Usando `.format()`
+
 ```python
 print("Meu nome é {} e tenho {} anos.".format(nome, idade)) # mesma coisa, porem voce separa a parte de formatacao
 
@@ -250,28 +272,33 @@ print("{0} + {1} = {2}".format(x, y, x+y))
 ```
 
 #### Concatenar strings
+
 ```python
 print("Olá " + nome + "!") # usando o + vc cola textos ou variveis a textos
 ```
 
 #### Manipular strings(texto)
+
 ```python
 texto = "Python é incrível!"
 print(texto.upper())  # MAIÚSCULO
 print(texto.lower())  # minúsculo
 print(texto.replace("Python", "Programar"))  # Substituir texto
 ```
-###  Operadores Aritméticos
-- `=`  → recebe valor  
-- `+`  → soma  
-- `-`  → subtração  
-- `*`  → multiplicação  
-- `/`  → divisão  
-- `//` → divisão inteira (descarta decimais)  
-- `%`  → resto da divisão (útil para saber se é par/impar)  
-- `**` → potência  
+
+### Operadores Aritméticos
+
+- `=` → recebe valor
+- `+` → soma
+- `-` → subtração
+- `*` → multiplicação
+- `/` → divisão
+- `//` → divisão inteira (descarta decimais)
+- `%` → resto da divisão (útil para saber se é par/impar)
+- `**` → potência
 
 #### Exemplos:
+
 ```python
 x = 10
 y = 3
@@ -285,25 +312,29 @@ print(x ** y)  # 1000 (10³)
 ```
 
 ### Operadores Atribuição Composta
+
 #### Exemplos:
+
 ```python
 x = 5
 x += 3  # equivalente a x = x + 3 → 8
 x *= 2  # equivalente a x = x * 2 → 16
 ```
 
-###  Operadores Lógicos — Portões Lógicos
-- `==` → igual  
-- `!=` → diferente  
-- `>`  → maior que  
-- `<`  → menor que  
-- `>=` → maior ou igual a  
-- `<=` → menor ou igual a  
-- `and` → E  
-- `or`  → OU  
-- `not` → negação  
+### Operadores Lógicos — Portões Lógicos
+
+- `==` → igual
+- `!=` → diferente
+- `>` → maior que
+- `<` → menor que
+- `>=` → maior ou igual a
+- `<=` → menor ou igual a
+- `and` → E
+- `or` → OU
+- `not` → negação
 
 #### Exemplos:
+
 ```python
 a = 5
 b = 10
@@ -312,35 +343,41 @@ print(a != b)            # True
 print(a > 2 and b < 20)  # True
 print(not (a == 5))      # False
 ```
-###  Tabelas Verdade
+
+### Tabelas Verdade
 
 #### and (E)
+
 | A     | B     | A and B |
-|-------|-------|---------|
+| ----- | ----- | ------- |
 | True  | True  | True    |
 | True  | False | False   |
 | False | True  | False   |
 | False | False | False   |
 
 #### or (OU)
+
 | A     | B     | A or B |
-|-------|-------|--------|
+| ----- | ----- | ------ |
 | True  | True  | True   |
 | True  | False | True   |
 | False | True  | True   |
 | False | False | False  |
 
 #### not (negação)
+
 | A     | not A |
-|-------|-------|
+| ----- | ----- |
 | True  | False |
 | False | True  |
 
 ### Identaçao em Python - Importante de mais
+
 diferente de outras linguagens, python nao tem delimitadores explicitos como as {} que marcam um bloco de codigo, ou seja precisamos seguir uma regra para escrever nosso codigo, assim o programa consegue executar com sucesso.
+
 ```python
 # CORRETO - indentação com 4 espaços
-if idade >= 18: 
+if idade >= 18:
     print("Maior de idade")  # ← 4 espaços ou 1 TAB
     print("Pode votar")      # ← 4 espaços ou 1 TAB
 
@@ -348,9 +385,11 @@ if idade >= 18:
 if idade >= 18:
 print("Isso vai dar erro")  # ← IndentationError
 ```
-###  Estruturas de Seleção
+
+### Estruturas de Seleção
 
 ### If, Elif e Else
+
 ```python
 idade : int= 18
 if idade >= 18:
@@ -362,6 +401,7 @@ else:
 ```
 
 ### Match Case
+
 ```python
 letra: str = input("Primeira letra do seu nome: ")
 match letra:
@@ -372,14 +412,17 @@ match letra:
     case _: # o caso _ é um coringa e voce pode inserir outros blocos de codigo e logicas dentro dele.
         print("Sua letra não está nos casos esperados :(")
 ```
+
 # Sites de apoio
-  [W3Schools - Python Tutorial](https://www.w3schools.com/python)
-  </br>
-  [GeeksForGeeks - Python Tutorial](https://www.geeksforgeeks.org/python/python-programming-language-tutorial/)
-  </br>
-  StackOverflow - fórum tira duvidas
+
+[W3Schools - Python Tutorial](https://www.w3schools.com/python)
+</br>
+[GeeksForGeeks - Python Tutorial](https://www.geeksforgeeks.org/python/python-programming-language-tutorial/)
+</br>
+StackOverflow - fórum tira duvidas
 
 # Exercícios de Programação
+
 ---
 
 ## 1. Soma de Três Números
@@ -390,6 +433,7 @@ match letra:
 **Saída:** Um único número: a soma.
 
 **Testes:**
+
 ```
 Entrada:
 2
@@ -416,6 +460,7 @@ Saída:
 **Saída:** Quociente e resto separados por espaço.
 
 **Testes:**
+
 ```
 Entrada:
 51
@@ -440,6 +485,7 @@ Saída:
 **Saída:** Média com uma casa decimal.
 
 **Testes:**
+
 ```
 Entrada:
 2
@@ -464,6 +510,7 @@ Saída:
 **Saída:** Fahrenheit com 6 casas decimais.
 
 **Testes:**
+
 ```
 Entrada:
 43.0
@@ -486,6 +533,7 @@ Saída:
 **Saída:** Valor absoluto da diferença.
 
 **Testes:**
+
 ```
 Entrada:
 1
@@ -510,6 +558,7 @@ Saída:
 **Saída:** Maior número.
 
 **Testes:**
+
 ```
 Entrada:
 4
@@ -534,6 +583,7 @@ Saída:
 **Saída:** `"SIM"` ou `"NAO"`.
 
 **Testes:**
+
 ```
 Entrada:
 3
@@ -556,6 +606,7 @@ NAO
 **Saída:** `"SIM"` ou `"NAO"`.
 
 **Testes:**
+
 ```
 Entrada:
 3
@@ -578,6 +629,7 @@ NAO
 **Saída:** `"jog1"`, `"jog2"` ou `"empate"`.
 
 **Testes:**
+
 ```
 Entrada:
 R
@@ -597,14 +649,15 @@ P
 Saída:
 jog1
 ```
+
 ## Resolução a baixo
+
 continue apenas se voce nao conseguiu mesmo resolver.
 
 <br><br><br><br><br>
 <br><br><br><br><br>
 <br><br><br><br><br>
 <br><br><br><br><br>
-
 
 ## Exemplo de Resolução
 
@@ -627,6 +680,7 @@ quociente = n // d
 resto = n % d
 print(quociente, resto)
 ```
+
 ### Q3
 
 ```python
@@ -641,6 +695,7 @@ celsius = float(input())
 fahrenheit = 1.8 * celsius + 32
 print(f"{fahrenheit:.6f}")
 ```
+
 ### Q5
 
 ```python
@@ -648,6 +703,7 @@ num1 = int(input())
 num2 = int(input())
 print(abs(num1 - num2))
 ```
+
 ### Q6
 
 ```python
@@ -655,6 +711,7 @@ num1 = int(input())
 num2 = int(input())
 print(max(num1, num2))
 ```
+
 ### Q7
 
 ```python
@@ -664,6 +721,7 @@ if numero >= 0:
 else:
     print("NAO")
 ```
+
 ### Q&
 
 ```python
@@ -673,6 +731,7 @@ if numero == 3 or numero == 5:
 else:
     print("NAO")
 ```
+
 ### Q9
 
 ```python
